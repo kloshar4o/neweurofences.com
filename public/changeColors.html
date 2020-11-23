@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Change colors</title>
+</head>
+<body>
+<style>
+
+    .flex {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    input[type="radio"] {
+        visibility: hidden;
+    }
+
+    input[type="range"] {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    label {
+        padding: 5px;
+        display: inline-block;
+        margin: 2px;
+        border-radius: 100px;
+        border: solid 2px gainsboro;
+        cursor: pointer;
+    }
+
+    .container {
+        margin: 17px auto;
+        position: relative;
+        max-width: 500px;
+        box-shadow: 0 0 40px -20px gray;
+        overflow: hidden;
+    }
+
+    .whiteBg, .bg, .shadow {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        transition: box-shadow 5s;
+    }
+
+    .whiteBg {
+        background-color: white;
+    }
+
+    img {
+        position: relative;
+        display: table;
+        max-width: 100%;
+        transition: opacity .2s;
+    }
+
+    .bg:after{
+        content: 'vasua';
+        display: block;
+        width: 57.5%;
+        height: 115%;
+        margin: -7.5%;
+        box-shadow: 0 0 25px 25px rgba(255, 255, 255, .1), 0 0 25px 25px rgba(0, 0, 0, .1) inset;
+        transform: rotate(15deg);
+    }
+
+    .dot-pattern {
+        background-size: 1px 1px;
+    }
+    .structure {
+        background-image:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAQAAAC0NkA6AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAF0WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDIgNzkuMTYwOTI0LCAyMDE3LzA3LzEzLTAxOjA2OjM5ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoV2luZG93cykiIHhtcDpDcmVhdGVEYXRlPSIyMDIwLTAzLTE0VDE5OjA3OjU0KzAyOjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDIwLTAzLTE0VDE5OjA3OjU0KzAyOjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyMC0wMy0xNFQxOTowNzo1NCswMjowMCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDplNjJmNWI5ZC03MjY1LTZlNDUtYjdiOS01OWQ2ZTRiNWMyM2EiIHhtcE1NOkRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDoyZjIyMTJkZi01M2I1LTg1NGItYjk1Ny1kYjNhYWE1MTE3MTQiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDphZmFkNDE3ZS0zZDc4LTEzNGYtODcxOS05ODA0ZTNhODc1MzAiIGRjOmZvcm1hdD0iaW1hZ2UvcG5nIiBwaG90b3Nob3A6Q29sb3JNb2RlPSIxIj4gPHhtcE1NOkhpc3Rvcnk+IDxyZGY6U2VxPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iY3JlYXRlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDphZmFkNDE3ZS0zZDc4LTEzNGYtODcxOS05ODA0ZTNhODc1MzAiIHN0RXZ0OndoZW49IjIwMjAtMDMtMTRUMTk6MDc6NTQrMDI6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE4IChXaW5kb3dzKSIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6ZTYyZjViOWQtNzI2NS02ZTQ1LWI3YjktNTlkNmU0YjVjMjNhIiBzdEV2dDp3aGVuPSIyMDIwLTAzLTE0VDE5OjA3OjU0KzAyOjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoV2luZG93cykiIHN0RXZ0OmNoYW5nZWQ9Ii8iLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+8bNKvwAAAQ5JREFUWIXtlssOhDAIRUvD//8ybpyK2lIQqMnEu9HMRA6v3Bao5KvmhAWCfEgphWHyIEyYFJd3a00lsGK7hu3a6SFJdIOcfgzALJlJHwLtCd3/jRrNJCT4T91KaPD+VK6xAum+9w6eNH19cbuC5TNI5Q4muTBQYUvlgoibxarExo12ZDowNcntFx1aDFOv1Bidm4NXagamxligLGHqWvubSx68YH9AoDLHOWSIsZUoQcLWQa5kfMabEhAgk44YLhmP9wc0iXghFv3P8ftBTHJeJHQHt6uSFntilYntOspLg/AOoutCBLuvTFzMe4NUmWT1mBd13hi+JYD3XBpWwddleGtXlC3zMPiu1Qde+Da3oTeAPeegaAAAAABJRU5ErkJggg==');
+        background-image:   url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAQAAAC0NkA6AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAF0WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDIgNzkuMTYwOTI0LCAyMDE3LzA3LzEzLTAxOjA2OjM5ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoV2luZG93cykiIHhtcDpDcmVhdGVEYXRlPSIyMDIwLTAzLTE0VDE5OjE1OjM2KzAyOjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDIwLTAzLTE0VDE5OjE1OjM2KzAyOjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyMC0wMy0xNFQxOToxNTozNiswMjowMCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1NWNlZTFkZC0xYzJjLTE2NDItYjI4Yy04N2Y1ZDk1NWMzMWEiIHhtcE1NOkRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDpjZjY0OTdlZC0zYzMyLWEwNDEtODYzYi0zYjg4MjBlNjg4NGIiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDowNjEyMTdkYy03YWEzLTY5NDItYmFhYS0yZTdlNmRkNWQ4MmMiIGRjOmZvcm1hdD0iaW1hZ2UvcG5nIiBwaG90b3Nob3A6Q29sb3JNb2RlPSIxIj4gPHhtcE1NOkhpc3Rvcnk+IDxyZGY6U2VxPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iY3JlYXRlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDowNjEyMTdkYy03YWEzLTY5NDItYmFhYS0yZTdlNmRkNWQ4MmMiIHN0RXZ0OndoZW49IjIwMjAtMDMtMTRUMTk6MTU6MzYrMDI6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE4IChXaW5kb3dzKSIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6NTVjZWUxZGQtMWMyYy0xNjQyLWIyOGMtODdmNWQ5NTVjMzFhIiBzdEV2dDp3aGVuPSIyMDIwLTAzLTE0VDE5OjE1OjM2KzAyOjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoV2luZG93cykiIHN0RXZ0OmNoYW5nZWQ9Ii8iLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+3WfyPAAAAXJJREFUWIXFV0kSwzAIExn//8v00Cx4ActLWvXgTKYgdhxRvI/jHbWiUpHo+ZtFS9bQHID5wwzNRRDIluHalSKBiddLOcmRAMg2+2/kChMAWNcuiNqDQENHoSt4ydO4+ElO2iRyn0EQeCTn/RblF5qeqPM8i6W0inLyq4lXJq5/rK7N8KqLA1mDEYnyaip2hSkqj0TvM6AJK8vIpZvXK+eQJoCRO7wZ2bJoYElnhvk5qe3Xc/NwvhWbkQuHYmDGkEtrFZbm2Hd38JFK1gfs+OsjHit2/BX1JirUcAT6Y0Xl8cYyDrkYebKtHOJw+TveN6DRrgFJJyJtA5pCYU58mrGBNr1PRjL/k824qd1idPvkPJfKudPxXXkqEGs5Icd/rxkJ9GfY6jWV0vNiCT8evkZiXUsTX4dG05n2TlLWrqlsaTztNlMCF0ctKwD0fJ1qW2SAljOsCldDc/bBTWnNhSQRtgjsBXyI6gu/hKPFO3IjFuADmDBhezOdujcAAAAASUVORK5CYII=');
+        background-size: 1% 1%;
+    }
+    .dot-pattern:after{
+        display: none;
+    }
+
+
+</style>
+<div id="app">
+    <div class="container" ref="container">
+        <div :style="getBg()" class="whiteBg"></div>
+        <div :style="getBg()" class="bg" :class="{'dot-pattern' : mat, 'structure' : structure}" ></div>
+        <div :style="getBs()" class="shadow"></div>
+        <img src="https://dev.gardurimd.ro/white.png" class="bg">
+        <img src="https://dev.gardurimd.ro/shadow.png" :style="getOp()">
+    </div>
+
+    <br>
+
+    <div class="flex">
+        <p>Мат: </p>
+        <input type="checkbox" v-model="mat">
+        &nbsp;
+        &nbsp;
+        <p>Структура: </p>
+        <input type="checkbox" v-model="structure">
+    </div>
+    <div class="flex">
+        <label v-for="color in colors" :style="{ backgroundColor: color}">
+            <input type="radio" :value="color" v-model="selectedColor">
+        </label>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+<script>
+    let maxShadowRange = 500;
+
+    window.onload = function(e){
+        let container = document.querySelector('.container');
+        maxShadowRange = container.clientWidth;
+    }
+
+
+    new Vue({
+        el: '#app',
+        data: {
+            mat: false,
+            structure: false,
+            animateShadow: true,
+            selectedColor: '#4b5054',
+            shadowRange: 0,
+            maxShadowRange: maxShadowRange,
+            colors: [
+                'white',
+                '#c1c1c1',
+                '#341a14',
+                '#4b5054',
+                '#1e2d6e',
+                '#00543d',
+                '#f13100',
+            ]
+        },
+        methods: {
+            getBg: function () {
+
+                return {backgroundColor: this.selectedColor}
+            },
+            getBs: function () {
+
+                let middle = maxShadowRange / 2;
+                let shadow = this.shadowRange;
+                let shadowOpacity = this.mat ? .2 : .4;
+                let boxShadow = `${(middle - shadow) * 4}px ${(middle - shadow) * 4}px ${maxShadowRange}px -${maxShadowRange}px rgba(255, 255, 255, ${shadowOpacity}) inset,
+                ${(middle - shadow) * 4}px ${(middle - shadow) * 4}px ${maxShadowRange / 2}px -${maxShadowRange * 1.5}px rgba(0, 0, 0, ${shadowOpacity}) inset`;
+
+                if (!this.mat) {
+
+                    boxShadow += `,
+     	             0 50px 80px -30px rgba(255, 255, 255, .5) inset,
+     	             50px 0 80px -30px rgba(0, 0, 0, .5) inset,
+     	            -50px 0 180px -50px rgba(0, 0, 0, .5) inset`;
+                }
+
+                let transitionValue = this.animateShadow ? 'box-shadow 7s linear' : 'none';
+                let transition = {'transition': transitionValue};
+
+
+                return {boxShadow, ...transition}
+            },
+            getOp: function () {
+                let shadow = this.shadowRange;
+                let middle = maxShadowRange / 2;
+                let setRange = (middle - shadow) / maxShadowRange;
+
+                if (setRange < 0) {
+                    setRange = Math.abs(setRange);
+                }
+
+                let opacity = this.mat ? .7 : .5 + setRange;
+
+                return {opacity}
+            },
+
+        },
+        created: function () {
+            let app = this;
+
+            const animate = function (app) {
+
+                app.animateShadow = true;
+                app.shadowRange = maxShadowRange;
+                setTimeout(function () {
+                    app.animateShadow = false;
+                    app.shadowRange = 0;
+                }, 6900)
+
+            };
+
+            setTimeout(function () {
+                animate(app);
+                setInterval(function () {
+                    animate(app);
+                }, 7000);
+            }, 500);
+
+        }
+    })
+
+</script>
+
+
+</body>
+</html>

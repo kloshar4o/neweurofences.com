@@ -1,0 +1,49 @@
+.transition{
+    transition: all .4s;
+    min-height: 200px;
+}
+
+.active {
+    background:  gainsboro ;
+}
+.transition.tab-navigation.navigation-slider {
+    width: inherit;
+}
+
+.overflow {
+    max-width:100%;
+    overflow: hidden;
+}
+
+.accordion article{
+    overflow: hidden;
+    transition: all .4s;
+}
+
+.accordion > div:not(.active) article{
+    max-height: 0 !important;
+}
+
+.dots{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.dots > div {
+    height: 8px;
+    transition: all .5s;
+    border-radius: 100px;
+    flex-grow: .5;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #4e281d;
+    opacity: .7;
+}
+
+.dots > div.active{
+    flex: 2;
+    background-color: #4e281d;
+    opacity: 1;
+}

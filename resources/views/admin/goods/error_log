@@ -1,0 +1,7 @@
+[27-Aug-2020 11:49:24 Europe/Bucharest] PHP Notice:  Undefined variable: i in /home/gardurimd/public_html/resources/views/admin/goods/edit-goods-item.blade.php on line 197
+[27-Aug-2020 11:49:24 Europe/Bucharest] PHP Notice:  Undefined variable: goods_item_id in /home/gardurimd/public_html/resources/views/admin/goods/edit-goods-item.blade.php on line 406
+[27-Aug-2020 11:49:24 Europe/Bucharest] PHP Notice:  Trying to get property 'recomend' of non-object in /home/gardurimd/public_html/resources/views/admin/goods/edit-goods-item.blade.php on line 406
+[27-Aug-2020 12:01:35 Europe/Bucharest] PHP Fatal error:  Uncaught Error: Class 'Request' not found in /home/gardurimd/public_html/resources/views/admin/goods/goods-list.blade.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/gardurimd/public_html/resources/views/admin/goods/goods-list.blade.php on line 9

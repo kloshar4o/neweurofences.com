@@ -1,0 +1,3 @@
+User-agent: *
+Sitemap: http://www.neweurofences.com/sitemap.xml
+Disallow: /admin-assets

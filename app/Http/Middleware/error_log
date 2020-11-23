@@ -1,0 +1,3 @@
+[08-Nov-2018 12:01:02 Europe/Bucharest] PHP Fatal error:  Class 'Illuminate\Cookie\Middleware\EncryptCookies' not found in /home/lavincomgarduri/public_html/app/Http/Middleware/EncryptCookies.php on line 8
+[08-Nov-2018 12:01:03 Europe/Bucharest] PHP Fatal error:  Class 'Illuminate\Foundation\Http\Middleware\TrimStrings' not found in /home/lavincomgarduri/public_html/app/Http/Middleware/TrimStrings.php on line 8
+[08-Nov-2018 12:01:03 Europe/Bucharest] PHP Fatal error:  Class 'Illuminate\Foundation\Http\Middleware\VerifyCsrfToken' not found in /home/lavincomgarduri/public_html/app/Http/Middleware/VerifyCsrfToken.php on line 8

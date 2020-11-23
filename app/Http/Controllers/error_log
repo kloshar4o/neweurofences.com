@@ -1,0 +1,4 @@
+[27-Aug-2020 12:34:56 Europe/Bucharest] PHP Fatal error:  Uncaught Error: Class 'App\Http\Controllers\Controller' not found in /home/gardurimd/public_html/app/Http/Controllers/ImageManipulator.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/gardurimd/public_html/app/Http/Controllers/ImageManipulator.php on line 6

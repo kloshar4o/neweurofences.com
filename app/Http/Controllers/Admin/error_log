@@ -1,0 +1,18 @@
+[08-Nov-2018 12:04:51 Europe/Bucharest] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/lavincomgarduri/public_html/app/Http/Controllers/Admin/AdminUserController.php on line 22
+[08-Nov-2018 12:04:51 Europe/Bucharest] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/lavincomgarduri/public_html/app/Http/Controllers/Admin/BannerController.php on line 17
+[08-Nov-2018 12:04:51 Europe/Bucharest] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/lavincomgarduri/public_html/app/Http/Controllers/Admin/BrandController.php on line 18
+[08-Nov-2018 12:04:51 Europe/Bucharest] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/lavincomgarduri/public_html/app/Http/Controllers/Admin/CityController.php on line 14
+[08-Nov-2018 12:04:52 Europe/Bucharest] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/lavincomgarduri/public_html/app/Http/Controllers/Admin/CommentsController.php on line 12
+[08-Nov-2018 12:04:52 Europe/Bucharest] PHP Fatal error:  Class 'App\Http\Controllers\RoleManager' not found in /home/lavincomgarduri/public_html/app/Http/Controllers/Admin/DefaultController.php on line 25
+[08-Nov-2018 12:04:52 Europe/Bucharest] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/lavincomgarduri/public_html/app/Http/Controllers/Admin/FeedFormController.php on line 12
+[08-Nov-2018 12:04:52 Europe/Bucharest] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/lavincomgarduri/public_html/app/Http/Controllers/Admin/GalleryController.php on line 19
+[08-Nov-2018 12:04:52 Europe/Bucharest] PHP Parse error:  syntax error, unexpected '(', expecting '{' in /home/lavincomgarduri/public_html/app/Http/Controllers/Admin/GoodsColorController(new).php on line 8
+[08-Nov-2018 12:04:52 Europe/Bucharest] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/lavincomgarduri/public_html/app/Http/Controllers/Admin/GoodsColorController.php on line 17
+[08-Nov-2018 12:04:52 Europe/Bucharest] PHP Parse error:  syntax error, unexpected '(', expecting '{' in /home/lavincomgarduri/public_html/app/Http/Controllers/Admin/GoodsColors(new).php on line 8
+[08-Nov-2018 12:04:53 Europe/Bucharest] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/lavincomgarduri/public_html/app/Http/Controllers/Admin/GoodsController.php on line 43
+[08-Nov-2018 12:04:53 Europe/Bucharest] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/lavincomgarduri/public_html/app/Http/Controllers/Admin/InfoLineController.php on line 20
+[08-Nov-2018 12:04:53 Europe/Bucharest] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/lavincomgarduri/public_html/app/Http/Controllers/Admin/LabelsController.php on line 15
+[08-Nov-2018 12:04:53 Europe/Bucharest] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/lavincomgarduri/public_html/app/Http/Controllers/Admin/MenuController.php on line 18
+[08-Nov-2018 12:04:53 Europe/Bucharest] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/lavincomgarduri/public_html/app/Http/Controllers/Admin/ModulesController.php on line 18
+[08-Nov-2018 12:04:53 Europe/Bucharest] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/lavincomgarduri/public_html/app/Http/Controllers/Admin/OrdersController.php on line 16
+[08-Nov-2018 12:04:53 Europe/Bucharest] PHP Fatal error:  Class 'App\Http\Controllers\Controller' not found in /home/lavincomgarduri/public_html/app/Http/Controllers/Admin/PromotionsController.php on line 19

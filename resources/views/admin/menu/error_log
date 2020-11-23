@@ -1,0 +1,1 @@
+[08-Nov-2018 12:05:35 Europe/Bucharest] PHP Fatal error:  Call to undefined function TableHasName() in /home/lavincomgarduri/public_html/resources/views/admin/menu/elements-list.blade.php on line 62

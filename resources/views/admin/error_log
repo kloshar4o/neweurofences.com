@@ -1,0 +1,5 @@
+[27-Aug-2020 12:25:47 Europe/Bucharest] PHP Notice:  Undefined variable: paginator in /home/gardurimd/public_html/resources/views/admin/pagination.blade.php on line 3
+[27-Aug-2020 12:25:47 Europe/Bucharest] PHP Fatal error:  Uncaught Error: Call to a member function currentPage() on null in /home/gardurimd/public_html/resources/views/admin/pagination.blade.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/gardurimd/public_html/resources/views/admin/pagination.blade.php on line 3

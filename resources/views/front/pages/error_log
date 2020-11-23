@@ -1,0 +1,7 @@
+[08-Nov-2018 12:05:39 Europe/Bucharest] PHP Notice:  Undefined variable: one_basket_item in /home/lavincomgarduri/public_html/resources/views/front/pages/cart.blade.php on line 31
+[08-Nov-2018 12:05:39 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/lavincomgarduri/public_html/resources/views/front/pages/cart.blade.php on line 31
+[08-Nov-2018 12:05:39 Europe/Bucharest] PHP Notice:  Undefined variable: goods in /home/lavincomgarduri/public_html/resources/views/front/pages/cart.blade.php on line 31
+[08-Nov-2018 12:05:39 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/lavincomgarduri/public_html/resources/views/front/pages/cart.blade.php on line 31
+[08-Nov-2018 12:05:39 Europe/Bucharest] PHP Notice:  Undefined variable: one_set_item in /home/lavincomgarduri/public_html/resources/views/front/pages/item-page.blade.php on line 133
+[08-Nov-2018 12:05:39 Europe/Bucharest] PHP Notice:  Trying to get property of non-object in /home/lavincomgarduri/public_html/resources/views/front/pages/item-page.blade.php on line 133
+[08-Nov-2018 12:05:39 Europe/Bucharest] PHP Notice:  Undefined variable: set_goods in /home/lavincomgarduri/public_html/resources/views/front/pages/item-page.blade.php on line 133

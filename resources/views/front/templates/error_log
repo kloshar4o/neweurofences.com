@@ -1,0 +1,3 @@
+[08-Nov-2018 12:05:40 Europe/Bucharest] PHP Fatal error:  Call to undefined function asset() in /home/lavincomgarduri/public_html/resources/views/front/templates/breadcrumbs.blade.php on line 1
+[08-Nov-2018 12:05:40 Europe/Bucharest] PHP Notice:  Undefined variable: paginator in /home/lavincomgarduri/public_html/resources/views/front/templates/pagination.blade.php on line 3
+[08-Nov-2018 12:05:40 Europe/Bucharest] PHP Fatal error:  Call to a member function currentPage() on null in /home/lavincomgarduri/public_html/resources/views/front/templates/pagination.blade.php on line 3
